@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class DepartmentServiceImpl implements DepartmentService{
 
@@ -21,4 +24,18 @@ public class DepartmentServiceImpl implements DepartmentService{
 
         return departmentRepository.save(department);
     }
+
+    public List<Department> fetchDepartment(){
+        return departmentRepository.findAll();
+    }
+
+    public Department fetchDepartmentById(Long id){
+//        return departmentRepository.getById(id);
+            return departmentRepository.findById(id).get();
+    }
+
+    public void deleteDepartmentById(Long id){
+        departmentRepository.deleteById(id);
+    }
+
 }
