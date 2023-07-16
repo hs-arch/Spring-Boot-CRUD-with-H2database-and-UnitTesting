@@ -3,7 +3,10 @@ package com.example.BootLearning.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import org.springframework.data.annotation.Id;
+//import org.springframework.data.annotation.Id;
+
+import jakarta.persistence.Id;
+
 @Entity
 public class Department {
     @Id
@@ -29,12 +32,12 @@ public class Department {
         this.departmentName = departmentName;
     }
 
-    public String getDepartmentAddesss() {
+    public String getDepartmentAddress() {
         return departmentAddress;
     }
 
-    public void setDepartmentAddesss(String departmentAddesss) {
-        this.departmentAddress = departmentAddesss;
+    public void setDepartmentAddress(String departmentAddress) {
+        this.departmentAddress = departmentAddress;
     }
 
     public String getDepartmentCode() {
@@ -45,10 +48,10 @@ public class Department {
         this.departmentCode = departmentCode;
     }
 
-    public Department(Long departmentId, String departmentName, String departmentAddesss, String departmentCode) {
+    public Department(Long departmentId, String departmentName, String departmentAddress, String departmentCode) {
         this.departmentId = departmentId;
         this.departmentName = departmentName;
-        this.departmentAddress = departmentAddesss;
+        this.departmentAddress = departmentAddress;
         this.departmentCode = departmentCode;
     }
 
@@ -60,7 +63,7 @@ public class Department {
         return "Department{" +
                 "departmentId=" + departmentId +
                 ", departmentName='" + departmentName + '\'' +
-                ", departmentAddesss='" + departmentAddress + '\'' +
+                ", departmentAddress='" + departmentAddress + '\'' +
                 ", departmentCode='" + departmentCode + '\'' +
                 '}';
     }
