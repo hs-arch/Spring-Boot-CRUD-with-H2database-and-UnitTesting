@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-    @RequestMapping(value="/", method= RequestMethod.GET)
+    @RequestMapping(value="/ham", method= RequestMethod.GET)
     public String HelloWorld(){
-        return ("Welcome to hamid learning");
+        return ("Welcome to hamid learning !!!! Test change");
     }
 
 }
