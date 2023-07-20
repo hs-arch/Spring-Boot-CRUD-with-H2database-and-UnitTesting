@@ -1,6 +1,6 @@
 # Spring-Boot-JPA-Security
 
-# Creating a basic application to use Spring Boot features.
+## Creating a basic application to use Spring Boot features.
 # Using the inbuilt H2 database for storing data.
 # Creating endpoints for all the CRUD operations on the H2 database, then also planning to switch the Database to either MySql or MongoDb for understanding purposes.
 # Learnig of different annotations and uses.
