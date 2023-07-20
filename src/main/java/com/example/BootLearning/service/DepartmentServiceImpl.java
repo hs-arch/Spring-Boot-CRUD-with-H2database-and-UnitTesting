@@ -64,4 +64,17 @@ public class DepartmentServiceImpl implements DepartmentService{
 
     }
 
+//    public Department fetchDepartmentName(String deptName){
+//
+//        //NOTE : very Imp
+//        // Just like we used deleteById, findById, methods in above endpoint implementation, we were calling these inbuild methods from the
+//        // Repository Class that we have extended in departmentRepository.
+//
+//        // But since we don't have any inbuild method like findByName or find by anything that we want
+//        // we will have to create our own findBy...whatever()  method in our departmentRepository interface which is extending
+//        // the JAP repository class.
+//
+//        return departmentRepository.findByFetchDepartmentName(deptName);
+//    }
+
 }

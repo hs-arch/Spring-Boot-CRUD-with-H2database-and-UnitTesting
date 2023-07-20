@@ -50,4 +50,10 @@ public class DepartmentController {
         //return "record Updated";
     }
 
+    //very important endpoint.
+//    @PutMapping("/fetchDepartmentByName/name/{name}")
+//    public Department fetchDepartmentName(@PathVariable("name") String departmentName){
+//        return departmentService.fetchDepartmentName(departmentName);
+//    }
+
 }
