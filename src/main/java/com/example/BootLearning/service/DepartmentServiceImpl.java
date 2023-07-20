@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Service
 public class DepartmentServiceImpl implements DepartmentService{
@@ -36,6 +37,31 @@ public class DepartmentServiceImpl implements DepartmentService{
 
     public void deleteDepartmentById(Long id){
         departmentRepository.deleteById(id);
+    }
+
+    public Department updateDepartment(Long id, Department department){
+        Department departmentValue = departmentRepository.findById(id).get();
+
+        // Check if the values of department name currently present in record is not null
+         if(Objects.nonNull(departmentValue.getDepartmentName()) && !"".equalsIgnoreCase(department.getDepartmentName()))
+        {
+            departmentValue.setDepartmentName(department.getDepartmentName());
+        }
+
+        // Check if the values of department Address currently present in record is not null
+        if(Objects.nonNull(departmentValue.getDepartmentAddress()) && !"".equalsIgnoreCase(department.getDepartmentAddress()))
+        {
+            departmentValue.setDepartmentAddress(department.getDepartmentAddress());
+        }
+
+        // Check if the values of department Code currently present in record is not null
+//        if(Objects.nonNull(departmentValue.getDepartmentCode()) && !"".equalsIgnoreCase(department.getDepartmentCode()))
+//        {
+            departmentValue.setDepartmentCode(department.getDepartmentCode());
+        //}
+
+        return departmentRepository.save(departmentValue);
+
     }
 
 }

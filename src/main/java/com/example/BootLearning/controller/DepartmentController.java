@@ -44,4 +44,10 @@ public class DepartmentController {
         return "Record Deleted";
     }
 
+    @PostMapping("/updateDepartments/{id}")
+    public Department updateDepartment(@PathVariable("id") Long id,  Department department){
+         return departmentService.updateDepartment(id,department);
+        //return "record Updated";
+    }
+
 }
