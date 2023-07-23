@@ -1,6 +1,7 @@
 package com.example.BootLearning.service;
 
 import com.example.BootLearning.entity.Department;
+import com.example.BootLearning.error.DepartmentNotFOundException;
 import com.example.BootLearning.repository.DepartmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 @Service
 public class DepartmentServiceImpl implements DepartmentService{
@@ -32,7 +34,16 @@ public class DepartmentServiceImpl implements DepartmentService{
 
     public Department fetchDepartmentById(Long id){
 //        return departmentRepository.getById(id);
-            return departmentRepository.findById(id).get();
+//             Optional<Department> department = departmentRepository.findById(id);
+
+//             if(department.isPresent() == true){
+//                 return department.get();
+//             }else{
+//                 throw new DepartmentNotFOundException("Department not found");
+//             }
+//        return department.get();
+
+        return departmentRepository.findById(id).get();
     }
 
     public void deleteDepartmentById(Long id){
