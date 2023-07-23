@@ -6,8 +6,11 @@ import jakarta.persistence.GenerationType;
 //import org.springframework.data.annotation.Id;
 
 import jakarta.persistence.Id;
+import jdk.jfr.DataAmount;
+import lombok.Builder;
 
 @Entity
+@Builder
 public class Department {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO) // this is for HOW do i want to generate my ID's
