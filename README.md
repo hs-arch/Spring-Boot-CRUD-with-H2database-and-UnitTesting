@@ -1,4 +1,4 @@
-# Spring-Boot-JPA-Security
+# Spring-Boot-CRUD with H2 database and Unit testing for each layers.
 
 ##### Creating a basic application to use Spring Boot features.
 ##### Using the inbuilt H2 database for storing data.
