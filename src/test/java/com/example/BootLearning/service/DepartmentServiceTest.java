@@ -27,7 +27,7 @@ class DepartmentServiceTest {
                 .departmentId(1L) // 1 L means value is 1 which is of Long type.
                 .build();
 
-        Mockito.when(departmentRepository.findById(1L)).thenReturn(Department);
+//        Mockito.when(departmentRepository.findById(1L)).thenReturn(Department);
 
     }
 
